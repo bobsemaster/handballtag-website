@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>OneDrive Listener</title>
+</head>
+<body>
+    <h1>OneDrive File Listener</h1>
+    <div th:if="${isLoggedIn}">
+        <p>Welcome, <strong th:text="${userName}"></strong>!</p>
+        <p th:if="${hasRefreshToken}">✅ Refresh token has been successfully captured. The app can now run in the background.</p>
+        <p th:unless="${hasRefreshToken}">❌ Could not capture refresh token. Make sure 'offline_access' scope is granted.</p>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Logout" />
+        </form>
+    </div>
+    <div th:unless="${isLoggedIn}">
+        <p><a href="/oauth2/authorization/azure">Login with Microsoft</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<div>
+  <div>
+    <a routerLink="/"><img ngSrc="back_icon.svg" height="32" width="32"/></a>
+  </div>
+  <ngx-extended-pdf-viewer
+    [src]="'/downloads/Handball/Handballtag/Handballtag%202025/Spielplan/' + pdfName() + '.pdf'"
+    zoom="page-width"
+    [showToolbar]="false">
+  </ngx-extended-pdf-viewer>
+</div>

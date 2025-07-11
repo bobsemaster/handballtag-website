@@ -1,0 +1,112 @@
+/* General Body Styles */
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+}
+
+/* Container for the entire list */
+.championship-container {
+  max-width: 700px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header section with logo and title */
+.championship-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+  width: 200px; /* Adjust size as needed */
+  margin-right: 20px;
+}
+
+.championship-header h1 {
+  /* Color extracted from the 'Handball' text in the logo */
+  color: #4A7729;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* List of age classes */
+.age-class-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual list item */
+.age-class-list li {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.age-class-list li:last-child {
+  border-bottom: none;
+}
+
+.age-class-item {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Add a hover effect for interactivity */
+.age-class-item:hover {
+  background-color: #f0f5eb;
+}
+
+/* Age class title (e.g., "A-Youth") */
+.age-class-item h2 {
+  margin: 0;
+  color: #333333;
+  font-size: 1.5rem;
+}
+
+/* Additional info for the age class */
+.age-class-item p {
+  margin: 0;
+  color: #666666;
+  font-size: 1rem;
+}
+
+.sub-header {
+  font-size: 1.1rem;
+  padding: 10px 30px;
+  border-bottom: 1px solid #e0e0e0;
+
+}
+
+.imprint {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.paragraph {
+  text-align: center;
+}
+.small-paragraph{
+  text-align: center;
+  font-size: 0.9rem;
+}

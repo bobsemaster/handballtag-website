@@ -1,0 +1,28 @@
+<div class="championship-container">
+  <header class="championship-header">
+    <img ngSrc="forstenried-logo.jpg" alt="TSV Forstenried Handball Logo" width="175" height="94" priority>
+  </header>
+  <article class="sub-header">
+    <p class="header">
+      Willkommen beim 32. Forstenrieder Handballtag 2025 des TSV Forstenried
+    </p>
+    <p class="paragraph">
+      Spielpläne, Ergebnisse, Tabellen
+    </p>
+    <p class="small-paragraph">
+      (Spielergebnisse und Tabellen werden nach Spielende zeitnah aktualisiert)
+    </p>
+  </article>
+  <ul class="age-class-list">
+    @for (team of teams; track team.name) {
+      <li routerLink="/spielplan/{{getPdf(team)}}">
+        <div class="age-class-item">
+          <h2>{{ team.name }}</h2>
+          <p>{{ team.description }}</p>
+        </div>
+        }
+  </ul>
+</div>
+<div class="imprint">
+  <a href="https://www.forstenried-handball.de/impressum">Impressum</a>
+</div>
