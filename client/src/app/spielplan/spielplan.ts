@@ -1,4 +1,4 @@
-import {Component, computed, input} from '@angular/core';
+import {Component, computed, input, ChangeDetectionStrategy} from '@angular/core';
 import {NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer';
 import {RouterLink} from '@angular/router';
 import {NgOptimizedImage} from '@angular/common';
@@ -12,6 +12,7 @@ import {NgOptimizedImage} from '@angular/common';
   ],
   standalone: true,
   templateUrl: './spielplan.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './spielplan.scss'
 })
 export class Spielplan {

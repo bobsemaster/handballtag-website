@@ -1,12 +1,10 @@
 import {Routes} from '@angular/router';
-import {TeamsView} from './teams-view/teams-view';
-import {Spielplan} from './spielplan/spielplan';
 
 export const routes: Routes = [{
   path: "",
-  component: TeamsView
+  loadComponent: () => import('./teams-view/teams-view').then((m) => m.TeamsView)
 }, {
   path: "spielplan/:pdfName",
-  component: Spielplan
+  loadComponent: () => import('./spielplan/spielplan').then((m) => m.Spielplan)
 }
 ];

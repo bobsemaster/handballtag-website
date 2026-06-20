@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ChangeDetectionStrategy} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 import {RouterLink} from '@angular/router';
 
@@ -16,6 +16,7 @@ interface Team {
   ],
   standalone: true,
   templateUrl: './teams-view.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './teams-view.scss'
 })
 export class TeamsView {
