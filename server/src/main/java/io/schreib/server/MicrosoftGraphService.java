@@ -190,7 +190,15 @@ public class MicrosoftGraphService {
 				.get()
 				.getValue()
 				.stream()
-				.map(item -> mapToDriveItem(item, rootItem))
+				.map(item -> {
+					try {
+						return mapToDriveItem(item, rootItem);
+					} catch (final Exception e) {
+						log.error("Error while mapping DriveItem to DriveFile: {}", item, e);
+						return null;
+					}
+				})
+				.filter(Objects::nonNull)
 				.toList();
 		log.info("Root Item: {}", rootItem);
 		return children;
